@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather Website</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+  <link rel="stylesheet" href="login-page.css">
+  <script defer src="login-page.js"></script>
+</head>
+
+<body>
+  <main id="main-holder">
+    <h1 id="login-header">Welcome !</h1> 
+    <h3>Please login to get information about the weather.</h3>
+    
+    <div id ='warning'></div>
+    
+    <form class="form" id="login-form">
+
+    <label class="emailSection">
+      <input type="email" name="email" id="email-field" class="login-form-field" autofocus placeholder="Enter your Email" required>
+      <span class="emailText"></span>
+    </label>
+
+    <label class="passwordSection">
+      <input type="password" name="password" id="password-field" class="login-form-field" autofocus placeholder="Enter your password" required>
+      <i id="visibilityButton"><span id="eye-icon" class="material-symbols-outlined">visibility</span></i>
+    </label>
+
+    <div>
+      <button id="login-form-submit" class="button">Login</button>
+    </div>
+      
+    </form>
+  </main>
+
+</body>
+</html>

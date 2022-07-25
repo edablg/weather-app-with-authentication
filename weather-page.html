@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather Homepage</title>
+  <link rel="stylesheet" href="./weather-page.css">
+
+</head>
+
+
+<body>
+
+  <div id="cities-container">
+    <select id="select" onchange="getCity()">
+      <option value="default">-- Select City --</option>
+    </select>
+  </div>
+
+  <div id="email-exit">
+    <p id="email-id"></p>
+    <p id="exit" a href="login-page.html">Exit</a></p>
+  </div>
+
+  <div class="container" id="container">
+    <span class="Welcome" id="welcome"></span>
+    <br />
+  </div>
+
+  <script src="./weather-page.js"></script>
+</body>
+
+</html>
