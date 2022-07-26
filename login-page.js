@@ -24,6 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
+
 // email type section
 const email = document.getElementById("email-field");
 email.addEventListener("input", () => {
