@@ -1,11 +1,21 @@
-window.onload = (event) => {
-  var email = document.getElementById("email-id");
-  email.innerHTML = localStorage.getItem("storageName");
+window.onload = () => {
+  const email = document.getElementById("email-id");
+  email.innerHTML = localStorage.getItem("emailStorage");
+  const checkIsLogin = localStorage.getItem("checkIsLogin");
+  const isAuthenticated = (checkIsLogin === "true");
+  if (!isAuthenticated) {
+    window.location.replace("./login-page.html");
+  }
 };
 
+const logOut = () => {
+  localStorage.clear();
+  window.location.replace("./login-page.html");
+}
+
 const getCity = () => {
-  var select = document.getElementById("select");
-  var value = select.options[select.selectedIndex].value;
+  const select = document.getElementById("select");
+  const value = select.options[select.selectedIndex].value;
   console.log(value);
   getWeatherData(value);
 }
@@ -103,5 +113,3 @@ const createArray = (arr) => {
 
 
 listCities();
-
-

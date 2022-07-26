@@ -6,9 +6,12 @@ document.addEventListener("DOMContentLoaded", () => {
   loginForm.addEventListener("submit", (e) => {
     e.preventDefault();
     const email = loginForm.email.value;
-    localStorage.setItem("storageName", email);
+    localStorage.setItem("emailStorage", email);
     const password = loginForm.password.value;
+    let checkIsLogin = false;
     if (email === "eda.belge@hotmail.com" && password === "Eda123") {
+      checkIsLogin = true;
+      localStorage.setItem("checkIsLogin", checkIsLogin);
       alert("Login is successful ! You are being redirected to the homepage.");
       window.location.replace("./weather-page.html");
     } else {
@@ -19,6 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+
 
 // email type section
 const email = document.getElementById("email-field");
