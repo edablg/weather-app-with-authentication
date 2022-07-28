@@ -16,7 +16,6 @@ const logOut = () => {
 const getCity = () => {
   const select = document.getElementById("select");
   const value = select.options[select.selectedIndex].value;
-  console.log(value);
   getWeatherData(value);
 }
 
